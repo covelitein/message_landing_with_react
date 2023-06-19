@@ -14,6 +14,7 @@ const Cards = () => {
           <h1 className="text-center text-lg mb-2">SCALABILITY</h1>
           <img
             src={Scalable}
+            alt="scalable"
             className="mx-auto text-[rgba(0,0,0,0.7)] h-[5rem]"
           />
           <p className="px-4 text-center text-md text-gray-500 mt-4">
@@ -30,6 +31,7 @@ const Cards = () => {
           <h1 className="text-center text-lg">CONNECTIVITY</h1>
           <img
             src={Connect}
+            alt="connect img"
             className="mx-auto text-[rgba(0,0,0,0.7)] h-[5rem]"
           />
           <p className="px-4 text-center text-md text-gray-500 mt-4">
@@ -44,7 +46,11 @@ const Cards = () => {
           data-aos-duration="1000"
         >
           <h1 className="text-center text-lg mb-2">ATTRACTIVE UI</h1>
-          <img src={Ui} className="mx-auto text-[rgba(0,0,0,0.7)] h-[5rem]" />
+          <img
+            src={Ui}
+            alt="attractive ui img"
+            className="mx-auto text-[rgba(0,0,0,0.7)] h-[5rem]"
+          />
           <p className="px-4 text-center text-md text-gray-500 mt-4">
             User friendly interfaces to enhance your easy usability
           </p>

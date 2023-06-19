@@ -5,6 +5,7 @@ import Cards from "../components/Cards"
 import PageScrollProgressBar from "../components/PageScrollProgressBar"
 import Footer from "../components/Footer"
 import About from "../components/About"
+import Services from "../components/Services"
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <Hero/>
       <Cards/>
       <About />
+      <Services/>
 
       <PageScrollProgressBar/>
       <Modal/>

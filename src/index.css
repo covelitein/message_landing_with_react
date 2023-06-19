@@ -123,6 +123,10 @@ body::-webkit-scrollbar-thumb{
   transition: stroke-dasharray 0.5s;
 }
 
+.shadow-1{
+  box-shadow:0px 0px 3px rgba(0,0,0,0.3);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

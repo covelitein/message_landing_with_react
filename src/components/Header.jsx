@@ -26,8 +26,16 @@ const Header = () => {
      });
   },100)
 
-    updateColor()
-    updateColorOnLoad()
+  useEffect(()=>{
+    updateColor();
+    updateColorOnLoad();
+
+    return () => {
+      null;
+    };
+    
+  },[])
+    
  
 
 

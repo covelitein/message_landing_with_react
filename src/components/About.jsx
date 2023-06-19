@@ -8,7 +8,7 @@ import { RiCustomerServiceLine } from "react-icons/ri";
 
 const About = () => {
   return (
-    <section className="px-2 my-11">
+    <section className="px-2 my-16">
       <main className="flex mx-auto w-11/12">
         <div className="flex-1 px-11">
           <div className="p-3">
@@ -68,7 +68,7 @@ const About = () => {
               height={300}
               width={400}
               threshold={0.95}
-              className="absolute top-0 left-0 -rotate-[8deg]"
+              className="-rotate-[8deg]"
             >
               <picture>
                 <source
