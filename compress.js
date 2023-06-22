@@ -5,8 +5,8 @@ import ttf2woff2 from 'ttf2woff2'
 
 const inputDir = './src/assets/inputDir'
 const outputDir = "./src/assets/outputDIr";
-const targetWidth = 200; // Desired width in pixels
-const targetHeight = 200; // Desired height in pixels
+const targetWidth = 300; // Desired width in pixels
+const targetHeight = 300; // Desired height in pixels
 
 const ttfInputDir = './src/assets/Fonts'
 const woffOutputDir = './src/assets/woffOutput'

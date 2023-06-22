@@ -31,8 +31,13 @@
   src: url('./assets/Fonts/NotoSerifTC-Regular.woff2');
 }
 @font-face {
-  font-family: Opensans;
+  font-family: poppins;
   src: url('./assets/Fonts/Poppins-Regular.woff2');
+}
+
+@font-face {
+  font-family: opensan;
+  src: url('./assets/Fonts/OpenSans-Italic-VariableFont_wdth\,wght.woff2');
 }
 
 * html {
@@ -43,7 +48,7 @@
 
 body {
   margin: 0;
-  font-family: 'opensans';
+  font-family: 'poppins';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -125,6 +130,11 @@ body::-webkit-scrollbar-thumb{
 
 .shadow-1{
   box-shadow:0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @tailwind base;

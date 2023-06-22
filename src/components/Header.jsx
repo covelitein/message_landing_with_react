@@ -1,7 +1,6 @@
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { RiMessage2Fill } from "react-icons/ri";
-import useThrottleCallBack from "../assets/customHooks/useThrottleCallBack";
 import useDebounce from "../assets/customHooks/useDebounce";
 
 const Header = () => {
@@ -9,7 +8,7 @@ const Header = () => {
 
   const updateColor = useDebounce(() => {
     window.addEventListener("scroll", function () {
-      if(document.documentElement.scrollTop > 300){
+      if(document.documentElement.scrollTop > 100){
         setDue(true)
       }else{
         setDue(false)
@@ -18,7 +17,7 @@ const Header = () => {
   },100)
   const updateColorOnLoad = useDebounce(()=> {
      window.addEventListener("load", function () {
-       if (document.documentElement.scrollTop > 300) {
+       if (document.documentElement.scrollTop > 100) {
          setDue(true);
        } else {
          setDue(false);
@@ -45,24 +44,48 @@ const Header = () => {
         isDue ? "bg-white shadow-lg" : "bg-transparent shadow-none"
       }`}
     >
-      <div className={`max-w-5xl mx-auto flex items-center justify-between `}>
-        <RiMessage2Fill className="text-5xl text-blue-600" />
-        <ul className={`flex items-center font-light max-sm:hidden ${isDue?'text-black':'text-white'}`}>
-          <li className="mx-4">
+      <div className={`max-w-6xl mx-auto flex items-center justify-between `}>
+        <div className="flex items-center">
+          <RiMessage2Fill className="text-5xl text-blue-600" />
+          <h3 className="font-[bellota] text-xl bg-gradient-to-l from-blue-700 to-blue-400 font-[1000] text-gradient">
+            ML
+          </h3>
+        </div>
+        <ul
+          className={`flex items-center font-light max-lg:hidden space-x-7 text-[0.9rem] ${
+            isDue ? "text-black" : "text-white"
+          }`}
+        >
+          <li className="">
             <Link to="/">Home</Link>
           </li>
-          <li className="mx-4">
+          <li className="">
             <Link to="/">About</Link>
           </li>
-          <li className="mx-4">
-            <Link
-              className="border-2 text-white border-[#0047ab] px-3 py-1 rounded-md bg-[#0047ab] hover:text-blue-500 hover:border-blue-500 hover:bg-transparent transition-all duration-500"
-              to="/profilecard"
-            >
-              View Profile Ui
+          <li className="">
+            <Link className="" to="/profilecard">
+              Services
+            </Link>
+          </li>
+          <li className="">
+            <Link className="" to="/scroll">
+              Faq
+            </Link>
+          </li>
+          <li className="">
+            <Link className="" to="/scroll">
+              Testimonial
             </Link>
           </li>
         </ul>
+        <div className="flex items-center space-x-2 text-[0.9rem] max-sm:hidden"> 
+          <Link to={'/login'} className="bg-blue-700 border-[0.1px] border-blue-700 text-white px-3 py-1 rounded-sm">
+            Login
+          </Link>
+          <Link to={'/register'} className="bg-blue-700 border-[0.1px] border-blue-700 text-white px-3 py-1 rounded-sm">
+            Sign up
+          </Link>
+        </div>
       </div>
     </nav>
   );

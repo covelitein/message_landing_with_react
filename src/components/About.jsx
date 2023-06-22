@@ -1,87 +1,81 @@
 import AboutImg from '../assets/CompressedImages/about2.webp'
-import AboutImg2 from '../assets/CompressedImages/aboutImg.webp'
 import LazyLoad from "react-lazy-load";
 import { RiBriefcaseLine } from "react-icons/ri";
 import { RiLightbulbLine } from "react-icons/ri";
 import { RiShieldLine } from "react-icons/ri";
 import { RiCustomerServiceLine } from "react-icons/ri";
+import Property from './subcomponents/Property';
 
 const About = () => {
   return (
     <section className="px-2 my-16">
-      <main className="flex mx-auto w-11/12">
-        <div className="flex-1 px-11">
-          <div className="p-3">
-            <h3 className="text-3xl text-gray-700">
+      <main className="flex flex-col lg:flex-row mx-auto w-11/12 max-sd:w-full">
+        <div className="lg:w-1/2 px-11 max-md:px-2">
+          <div className="sm:p-3">
+            <h3 className="text-3xl text-gray-700 max-sd:text-lg">
               Discover who we are and what we aim to achieve
             </h3>
           </div>
-          <div className="pl-4 text-sm text-gray-600 pr-3">
+          <div className="sm:pl-4 text-sm max-sd:text-[0.75rem] text-gray-600 sm:pr-3">
             Unleashing Potential, Driving Impact, Achieving Excellence Together
           </div>
-          <div
-            className="flex flex-col space-y-8 justify-center p-3 mt-5"
-            data-aos="fade-in"
-            data-aos-duration="1000"
-          >
-            <div
-              className="flex items-center space-x-3  p-2"
+
+          <div className="flex flex-col space-y-8 justify-center sm:p-3 mt-5">
+            <Property
+              icon={
+                <RiBriefcaseLine className="text-4xl bg-blue-600 text-white p-1 rounded-md max-sm:text-3xl" />
+              }
+              propertyName={"Experienced professionals"}
               data-aos="slide-right"
               data-aos-duration="1000"
-            >
-              <RiBriefcaseLine className="text-4xl bg-blue-600 text-white p-1 rounded-md" />
-              <span className="text-gray-600">Experienced professionals</span>
-            </div>
-            <div
-              className="flex items-center space-x-3 p-2"
+            />
+
+            <Property
+              icon={
+                <RiLightbulbLine className="text-4xl bg-blue-600 text-white p-1 rounded-md max-sm:text-3xl" />
+              }
+              propertyName={"Innovative solutions"}
               data-aos="slide-right"
               data-aos-duration="1000"
-            >
-              <RiLightbulbLine className="text-4xl bg-blue-600 text-white p-1 rounded-md" />
-              <span className="text-gray-600">Innovative solutions</span>
-            </div>
-            <div
-              className="flex items-center space-x-3 p-2"
+            />
+
+            <Property
+              icon={
+                <RiShieldLine className="text-4xl bg-blue-600 text-white p-1 rounded-md max-sm:text-3xl" />
+              }
+              propertyName={"Data security and privacy"}
               data-aos="slide-right"
               data-aos-duration="1000"
-            >
-              <RiShieldLine className="text-4xl bg-blue-600 text-white p-1 rounded-md" />
-              <span className="text-gray-600">Data security and privacy</span>
-            </div>
-            <div
-              className="flex items-center space-x-3 p-2"
+            />
+
+            <Property
+              icon={
+                <RiCustomerServiceLine className="text-4xl bg-blue-600 text-white p-1 rounded-md max-sm:text-3xl" />
+              }
+              propertyName={"Customer support"}
               data-aos="slide-right"
               data-aos-duration="1000"
-            >
-              <RiCustomerServiceLine className="text-4xl bg-blue-600 text-white p-1 rounded-md" />
-              <span className="text-gray-600">Customer support</span>
-            </div>
+            />
+
           </div>
         </div>
-        <div className="w-[55%] px-16 pt-7">
+        <div className="lg:w-1/2 px-8 pt-7 max-md:px-1 max-lg:mt-5 h-[40rem] lg:h-[30rem] max-sm:h-[25rem] max-sd:h-[20rem]">
           <div
-            className="w-4/5 h-[30rem] bg-blue-800 rounded-xl mx-auto relative"
+            className="w-full h-full bg-blue-800 rounded-xl mx-auto relative"
             data-aos="fade-in"
             data-aos-duration="1000"
           >
             <LazyLoad
-              height={300}
-              width={400}
+              height={"100%"}
+              width={"100%"}
               threshold={0.95}
-              className="-rotate-[8deg]"
+              className="lg:-rotate-[8deg] absolute w-full top-0 left-0"
             >
-              <picture>
-                <source
-                  srcSet={AboutImg}
-                  type="image/jpeg"
-                  className="h-[30rem] rounded-xl"
-                />
-                <img
-                  src={AboutImg}
-                  alt="About"
-                  className="h-[30rem] rounded-xl w-11/12 object-cover "
-                />
-              </picture>
+              <img
+                src={AboutImg}
+                alt="About"
+                className="w-full h-full rounded-xl object-cover"
+              />
             </LazyLoad>
           </div>
         </div>
