@@ -1,10 +1,10 @@
-import { team1, team2, team3 } from "./subcomponents/Images";
-import TeamCard from "./subcomponents/TeamCard";
+import { team1, team2, team3 } from "../assets/CompressedImages";
+import { TeamCard } from "./subcomponents";
 
 const OurTeam = () => {
   return (
-    <section className="px-5 mt-32 mb-32">
-      <main className="sm:w-11/12 mx-auto w-full ">
+    <section className="sm:px-5 mt-32 mb-32 px-2">
+      <main className="sm:w-11/12 mx-auto w-full">
         <h3 className="text-3xl px-2 max-sd:text-lg">
           We have Put Together a Collection Of Experts
         </h3>
@@ -16,16 +16,22 @@ const OurTeam = () => {
             name={"Gilbert Raul"}
             img={team1}
             role={"Chief Executive Officer"}
+            data-aos="slide-up"
+            data-aos-duration="1000"
           />
           <TeamCard
             name={"Travis king"}
             img={team2}
             role={"General Manager"}
+            data-aos="slide-up"
+            data-aos-duration="1000"
           />
           <TeamCard
             name={"Angelina Louis"}
             img={team3}
             role={"Operations Manager"}
+            data-aos="slide-up"
+            data-aos-duration="1000"
           />
         </div>
       </main>

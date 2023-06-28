@@ -1,10 +1,6 @@
-import Google from "../assets/CompressedImages/google.webp"
-import Github from "../assets/CompressedImages/github.webp"
-import Linkedin from "../assets/CompressedImages/linkedin.webp"
-import Whatsapp from "../assets/CompressedImages/whatsapp.webp"
-import RoutesImg from "../assets/CompressedImages/routes.webp";
 import { FaTimes } from "react-icons/fa"
-import {setGlobalState,useGlobalState} from "../store/store.js"
+import { setGlobalState, useGlobalState } from "../store/store.js"
+import { github, google, linkedin, routesImg, whatsapp } from "../assets/CompressedImages"
 
 const Modal = () => {
   const [opacity] = useGlobalState("AddToursModalOpacity")
@@ -34,7 +30,7 @@ const Modal = () => {
           onClick={closeModal}
         />
         <img
-          src={RoutesImg}
+          src={routesImg}
           alt=""
           className="w-1/3 object-cover rounded-l-2xl h-full max-md:hidden"
         />
@@ -67,10 +63,10 @@ const Modal = () => {
             Submit
           </button>
           <div className="flex">
-            <img src={Google} alt="google" className="h-[1.6rem] mx-3 " />
-            <img src={Github} alt="github" className="h-[1.6rem] mx-3 " />
-            <img src={Linkedin} alt="linkedIn" className="h-[1.6rem] mx-3 " />
-            <img src={Whatsapp} alt="whatsapp" className="h-[1.6rem] mx-3 " />
+            <img src={google} alt="google" className="h-[1.6rem] mx-3 " />
+            <img src={github} alt="github" className="h-[1.6rem] mx-3 " />
+            <img src={linkedin} alt="linkedIn" className="h-[1.6rem] mx-3 " />
+            <img src={whatsapp} alt="whatsapp" className="h-[1.6rem] mx-3 " />
           </div>
         </form>
       </div>

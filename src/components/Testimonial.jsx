@@ -1,12 +1,11 @@
 import React from "react";
-import img1 from "../assets/CompressedImages/test-1.webp";
-import img2 from "../assets/CompressedImages/test-2.webp";
 import { IoMdStar, IoMdStarHalf } from "react-icons/io";
-import TestimonialCard from "./subcomponents/TestimonialCard";
+import { TestimonialCard } from "./subcomponents";
+import { testimony1, testimony2 } from "../assets/CompressedImages";
 
 const Testimonial = () => {
   return (
-    <section className="px-3 mt-11 mb-6">
+    <section className="px-3 mt-11 mb-6" id="testimonial">
       <main className="w-11/12 mx-auto max-sd:w-full">
         <h3 className="text-3xl px-2 max-sd:text-lg">
           Top Testimonies By Our Clients
@@ -18,7 +17,7 @@ const Testimonial = () => {
             testimony={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos aperiam natus ad voluptatem veritatis dolores excepturi, vel libero accusamus."
             }
-            img={img1}
+            img={testimony1}
             tName={"Leonardo Peres"}
             data-aos="fade-in"
             data-aos-duration="1000"
@@ -34,7 +33,7 @@ const Testimonial = () => {
             testimony={
               "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos aperiam natus ad voluptatem veritatis dolores excepturi, vel libero accusamus."
             }
-            img={img2}
+            img={testimony2}
             tName={"Robert Greene"}
             data-aos="fade-in"
             data-aos-duration="1000"

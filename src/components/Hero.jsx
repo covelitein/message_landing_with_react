@@ -1,5 +1,5 @@
+import { heroImg } from "../assets/CompressedImages";
 import { setGlobalState } from "../store/store.js"
-import HeroImg from "../assets/CompressedImages/heroImg.webp";
 
 const Hero = () => {
 
@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <div className="min-h-[60vh] text-white flex justify-center items-center flex-col"
-     style={{background:`linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(${HeroImg}) fixed no-repeat center/cover`}}
+     style={{background:`linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(${heroImg}) fixed no-repeat center/cover`}}
     >
       <h1
         className="text-3xl text-center max-md:text-2xl max-sd:text-lg"

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 
 
-const TeamCard = ({ img, name, role }) => {
+const TeamCard = ({ img, name, role, ...props }) => {
 
   const [show, setShow] = useState(false);
 
@@ -15,7 +15,7 @@ const TeamCard = ({ img, name, role }) => {
   };
 
   return (
-    <div className="w-full relative rounded-md">
+    <div className="w-full relative rounded-md" {...props}>
       <div
         className="w-11/12 mx-auto relative"
         onMouseOver={handleShow}

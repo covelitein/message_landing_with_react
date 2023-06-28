@@ -34,8 +34,8 @@ const App = ()=> {
       <Suspense fallback={<Preloader />} >
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/register" element={<Register />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path='*' element={<h1 className="text-4xl text-red-700">Not found</h1>} />
         </Routes>
       </Suspense>

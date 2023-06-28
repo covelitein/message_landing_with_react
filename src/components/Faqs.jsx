@@ -1,9 +1,9 @@
 import React from "react";
-import Accordion from "./subcomponents/Accordion";
+import { Accordion } from "./subcomponents";
 
 const Faqs = () => {
   return (
-    <section className="mt-32 mb-32 w-11/12 mx-auto">
+    <section className="mt-32 mb-32 w-11/12 mx-auto" id="faq">
       <h3 className="sd:text-3xl text-lg">Frequently Asked Questions</h3>
       <h5 className="text-sm mt-1">
         Popular questions we mostly get from our clients

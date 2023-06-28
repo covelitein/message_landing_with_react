@@ -1,14 +1,14 @@
-import AboutImg from '../assets/CompressedImages/about2.webp'
 import LazyLoad from "react-lazy-load";
 import { RiBriefcaseLine } from "react-icons/ri";
 import { RiLightbulbLine } from "react-icons/ri";
 import { RiShieldLine } from "react-icons/ri";
 import { RiCustomerServiceLine } from "react-icons/ri";
-import Property from './subcomponents/Property';
+import { aboutImg } from "../assets/CompressedImages";
+import { Property } from "./subcomponents";
 
 const About = () => {
   return (
-    <section className="px-2 my-16">
+    <section className="px-2 my-16" id="about">
       <main className="flex flex-col lg:flex-row mx-auto w-11/12 max-sd:w-full">
         <div className="lg:w-1/2 px-11 max-md:px-2">
           <div className="sm:p-3">
@@ -72,7 +72,7 @@ const About = () => {
               className="lg:-rotate-[8deg] absolute w-full top-0 left-0"
             >
               <img
-                src={AboutImg}
+                src={aboutImg}
                 alt="About"
                 className="w-full h-full rounded-xl object-cover"
               />

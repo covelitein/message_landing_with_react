@@ -1,9 +1,9 @@
 import React from "react";
-import ServiceCard from "./subcomponents/ServiceCard";
+import { ServiceCard } from "./subcomponents";
 
 const Services = () => {
   return (
-    <section className="p-5 mt-32 w-11/12 mx-auto mb-32 max-sd:w-full max-sd:p-3">
+    <section className="p-5 mt-32 w-11/12 mx-auto mb-32 max-sd:w-full max-sd:p-3" id="services">
       <div className="px-1">
         <h3 className="text-3xl text-gray-700 max-sd:text-lg">
           Explore Our range of services, what we offer.

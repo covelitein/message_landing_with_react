@@ -1,3 +1,5 @@
+import useDebounce from "../customHooks/useDebounce";
+
 const wait = (waitTime)=> {
   return new Promise((resolve) => {
     setTimeout(resolve, waitTime);
@@ -29,7 +31,87 @@ const throttle = (cb, delay = 1000)=> {
   };
 }
 
+
+const checkXAxisLessThan = (size) => {
+  const message = "No window object";
+  const windowElement = window || message;
+
+  if (windowElement === message) return message;
+
+  const resizeHandler = () => {
+    if (window.innerWidth < size) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  windowElement.addEventListener("resize", resizeHandler);
+  windowElement.addEventListener("load", resizeHandler);
+};
+
+const checkXAxisGreaterThan = (size) => {
+  const message = "No window object";
+  const windowElement = window || message;
+
+  if (windowElement === message) return message;
+
+  const resizeHandler = () => {
+    if (window.innerWidth > size) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  windowElement.addEventListener("load", resizeHandler);
+  windowElement.addEventListener("resize", resizeHandler);
+};
+
+const checkYAxisLessThan = (size) => {
+  const message = "No window object";
+  const windowElement = window || message;
+
+  if (windowElement === message) return message;
+
+  const resizeHandler = () => {
+    if (window.innerHeight < size) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  windowElement.addEventListener("load", resizeHandler);
+  windowElement.addEventListener("resize", resizeHandler);
+};
+
+const checkYAxisGreaterThan = (size) => {
+  const message = "No window object";
+  const windowElement = window || message;
+
+  if (windowElement === message) return message;
+
+  const resizeHandler = () => {
+    if (window.innerHeight > size) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  windowElement.addEventListener("load", resizeHandler);
+  windowElement.addEventListener("resize", resizeHandler);
+};
+
+ 
+
+
 export {
-    wait,
-    throttle
-}
+  wait,
+  throttle,
+  checkXAxisLessThan,
+  checkXAxisGreaterThan,
+  checkYAxisLessThan,
+  checkYAxisGreaterThan
+};
